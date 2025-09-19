@@ -1,0 +1,21 @@
+epics:
+  - id: A
+    name: Foundation & Theme
+    tasks:
+      - id: A1.1
+        name: App shell
+      - id: A1.2
+        name: Theme tokens
+  - id: B
+    name: MVP Screens
+    tasks:
+      - id: B1
+        name: Dashboard
+      - id: B2
+        name: Parse
+      - id: B3
+        name: Index + Chat
+      - id: B4
+        name: Documents
+      - id: B5
+        name: Settings

@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+coverage
+playwright-report
+blob-report
+junit.xml
+*.log
+.env
+.env.*
