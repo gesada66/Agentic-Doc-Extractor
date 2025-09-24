@@ -14,7 +14,13 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
+    "dotenv": "^17.2.2",
+    "llamaindex": "^0.12.0",
     "next": "14.2.6",
+    "openai": "^5.21.0",
+    "pdf-parse": "^1.1.1",
+    "pdf2pic": "^3.2.0",
+    "pdfjs-dist": "^5.4.149",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
@@ -24,6 +30,7 @@
     "@testing-library/react": "16.0.1",
     "@types/jest": "29.5.12",
     "@types/node": "20.14.12",
+    "@types/pdf-parse": "^1.1.5",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.20",

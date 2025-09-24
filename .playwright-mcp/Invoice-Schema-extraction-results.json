@@ -1,0 +1,18 @@
+{
+  "invoice_number": {
+    "value": null,
+    "confidence": 0.85
+  },
+  "total_amount": {
+    "value": null,
+    "confidence": 0.85
+  },
+  "due_date": {
+    "value": null,
+    "confidence": 0.85
+  },
+  "vendor_name": {
+    "value": null,
+    "confidence": 0.85
+  }
+}

@@ -72,6 +72,7 @@
 - Schema Editor (add/edit fields) + “Infer schema” (mock); run extraction; JSON preview; per-page vs whole-doc toggle; optional confidence tags.  
 - **DoD**: Editor CRUD works; preview shows shaped JSON.
 
+
 **Connectors**  
 - Cards for S3, Box, SharePoint, Google Drive (auth state: Connected/Not Connected).  
 - Settings drawer (bucket/folder id, sync toggle) — **UI state only**.  
@@ -84,6 +85,29 @@
 **Usage & Limits**  
 - Usage summary (parse/extract/index/query counts); limits/caps with plan label (mock).  
 - **DoD**: Counters update from mock; reset button for demo.
+
+---
+
+## Extraction & Schema Dependencies
+
+Schema Generation & Inference
+Use LlamaCloud’s Extract API to generate extraction schemas (via example file or natural language prompt) before Phase 2. Support editing schema manually. 
+LlamaIndex Python Documentation
++1
+
+Text / Layout Extraction Features
+Rely on LlamaParse / Parse API to handle raw document parsing: multi-page, layout, tables/charts/images, OCR if needed. OpenAI alone does not provide OCR or layout extraction. Use LlamaIndex Cloud for these. 
+developers.llamaindex.ai
++1
+
+Structured Output & Validation
+Once text is parsed, use OpenAI API (via Agents SDK) + schema-defined tools to produce structured output (JSON) from that text. Optionally also use LlamaExtract API to validate or enforce schema output. 
+developers.llamaindex.ai
++1
+
+Batch Processing & Limits
+LlamaCloud Extract supports batch jobs; schema inference limits hold (e.g. small number of sample files/pages) for infer. Plan Phase 2 features accordingly. 
+llamaindex.ai
 
 ---
 
@@ -166,6 +190,74 @@ DATABASE_URL=sqlite://./dev.db
 - **LlamaCloud**: Parse / Classify / Extract / Index / Query UI concepts.  
 - **Playwright**: E2E/component testing best practices.
 - (Codex may search docs as needed; use official sources.)
+
+---
+## Llamaindex / LlamaCloud Doc URLs for Infer Schema inside Extractor menu
+
+https://docs.cloud.llamaindex.ai/llamaparse/features/schema_inference
+https://developers.llamaindex.ai/python/cloud/llamaparse/features/schema_inference/
+https://api.cloud.llamaindex.ai/api/v1/extraction/infer_schema
+
+
+## Useful LlamaIndex / LlamaCloud Doc URLs for Raw Extraction / Schema & Parsing
+
+https://docs.cloud.llamaindex.ai/API/generate-extraction-schema-api-v-1-extraction-extraction-agents-schema-generate-post
+ 
+LlamaIndex Python Documentation
+
+https://docs.cloud.llamaindex.ai/llamacloud/how_to/files/extract_figures
+ 
+LlamaIndex Python Documentation
+
+https://docs.cloud.llamaindex.ai/llamaextract/examples/auto_generate_schema_for_extraction
+ 
+LlamaIndex Python Documentation
+
+https://docs.cloud.llamaindex.ai/llamextract/getting_started/web_ui
+ 
+developers.llamaindex.ai
+
+https://developers.llamaindex.ai/python/cloud/llamaextract/getting_started/api/
+ 
+developers.llamaindex.ai
+
+https://llamaindex.ai/blog/introducing-llamaextract-beta-structured-data-extraction-in-just-a-few-clicks
+ 
+llamaindex.ai
+
+https://developers.llamaindex.ai/python/examples/structured_outputs/structured_outputs/
+
+## 📑 LlamaIndex / LlamaParse — Parsing Docs & API Endpoints
+
+Getting Started:
+https://developers.llamaindex.ai/python/cloud/llamaparse/getting_started
+
+Upload a document (start parsing job):
+POST https://api.cloud.llamaindex.ai/api/v1/parsing/upload
+
+Get job status:
+GET https://api.cloud.llamaindex.ai/api/v1/parsing/job/{job_id}
+
+Get raw Markdown result:
+GET https://api.cloud.llamaindex.ai/api/v1/parsing/job/{job_id}/result/raw/markdown
+https://docs.cloud.llamaindex.ai/API/get-job-raw-md-result-api-v-1-parsing-job-job-id-result-raw-markdown-get
+
+Output formats (text, markdown, json, xlsx):
+https://developers.llamaindex.ai/python/cloud/llamaparse/presets_and_modes/output_modes
+
+Supported file extensions / document types:
+https://docs.cloud.llamaindex.ai/API/get-supported-file-extensions-api-v-1-parsing-supported-file-extensions-get
+
+https://developers.llamaindex.ai/python/cloud/llamaparse/features/supported_document_types
+
+Webhook usage (webhook_url for job completion):
+https://docs.cloud.llamaindex.ai/llamaparse/features/webhook
+
+Parsing options (modes, presets, page ranges, OCR toggle):
+https://developers.llamaindex.ai/python/cloud/llamaparse/features/parsing_options
+
+Category overview — Parsing:
+https://docs.cloud.llamaindex.ai/category/API/parsing
 
 ---
 

@@ -1,0 +1,20 @@
+{
+  "fileContent": "data:application/pdf;base64,JVBERi0xLjQKJcfsj6IKNSAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDMgMCBSCi9SZXNvdXJjZXMgPDwKL0ZvbnQgPDwKL0YxIDYgMCBSCj4+Cj4+Ci9NZWRpYUJveCBbMCAwIDU5NSA4NDJdCi9Db250ZW50cyA3IDAgUgo+Pgo1IDAgb2JqCjw8Ci9UeXBlIC9QYWdlCi9QYXJlbnQgMyAwIFIKL1Jlc291cmNlcyA8PAovRm9udCA8PAovRjEgNiAwIFIKPj4KPj4KL01lZGlhQm94IFswIDAgNTk1IDg0Ml0KL0NvbnRlbnRzIDcgMCBSCj4+CjcgMCBvYmoKPDwKL0xlbmd0aCA4IDAgUgo+PgpzdHJlYW0KQlQKL0YxIDEyIFRmCjcyIDcyMCBUZAooSGVsbG8gV29ybGQpIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKOCAwIG9iago0MQplbmRvYmoKNiAwIG9iago8PAovVHlwZSAvRm9udAovU3VidHlwZSAvVHlwZTEKL0Jhc2VGb250IC9IZWx2ZXRpY2EKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFs0IDAgUl0KL0NvdW50IDEKL01lZGlhQm94IFswIDAgNTk1IDg0Ml0KPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDMgMCBSCj4+CmVuZG9iagp4cmVmCjAgOQowMDAwMDAwMDAwIDY1NTM1IGYKMDAwMDAwMDAwOSAwMDAwMCBuCjAwMDAwMDAwNTggMDAwMDAgbgowMDAwMDAwMTE1IDAwMDAwIG4KMDAwMDAwMDI2OSAwMDAwMCBuCjAwMDAwMDAzNzQgMDAwMDAgbgowMDAwMDAwNDQxIDAwMDAwIG4KMDAwMDAwMDA1OTUgMDAwMDAgbgowMDAwMDAwNjc0IDAwMDAwIG4KdHJhaWxlcgo8PAovU2l6ZSA5Ci9Sb290IDEgMCBSCj4+CnN0YXJ0eHJlZgo3NjUKJSVFT0YK",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "document_title": {
+        "type": "string",
+        "description": "Title of the document"
+      },
+      "author": {
+        "type": "string", 
+        "description": "Author of the document"
+      },
+      "summary": {
+        "type": "string",
+        "description": "Brief summary of the document content"
+      }
+    }
+  }
+}
